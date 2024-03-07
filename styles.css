@@ -1,0 +1,107 @@
+:root {
+  /* colors */
+  --yellow: hsl(47, 88%, 63%);
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 50%);
+  --Black: hsl(0, 0%, 7%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+body{
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   font-family:"Figtree", sans-serif;
+   flex-direction: column;
+}
+
+.card{
+    background-color: var(--White);
+    width: 18.75rem;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.25rem;
+    border-radius: .75rem;
+    border: solid .0625rem black;
+    box-shadow: .375rem .3125rem 0 .125rem rgb(0,0,0);
+}
+
+.card-img img{
+    width: 100%;
+    border-radius: 1.125rem;
+}
+
+.card-contain{
+    display: grid;
+    grid-template-rows: auto;
+    gap: 1.2rem;
+}
+
+.card-contain h1{
+    font-size: 1.125rem;
+    font-weight: 800;
+}
+
+.card-contain h1:hover{
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+.card-contain span{
+    display: block;
+    background-color: var(--yellow);
+    width: 5rem;
+    padding: .375rem;
+    font-weight: 800;
+    text-align: center;
+    font-size: .875rem;
+    border-radius: .3125rem;
+}
+
+.card-contain span + p{
+    font-size: .75rem;
+}
+
+.card-contain h1 ~ p{
+    color: var(--Grey);
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+}
+
+.card-footer img{
+    width: 2.125rem;
+    margin-right: .75rem;
+}
+
+.card-footer p{
+    font-weight: 800;
+}
+
+@media (min-width: 768px) {
+    .card{
+        width: 21.875rem;
+        height: 31.25rem;
+    }
+
+    .card-contain{
+        gap: 1.5rem;
+    }
+    .card-contain span + p{
+        font-size: 1rem;
+    }
+}
+
